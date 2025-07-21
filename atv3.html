@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 3</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 10px 5px;
+      padding: 10px;
+      border: 1px solid #ff66b3;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ff99cc;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: #ffccf2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digite dois números e veja a lista. Passe o mouse sobre os itens:</h2>
+  <input type="number" id="inicio" placeholder="Número inicial">
+  <input type="number" id="fim" placeholder="Número final">
+  <br>
+  <button onclick="gerarLista()">Gerar Lista</button>
+  <ul id="lista"></ul>
+  <script>
+    function gerarLista() {
+      const inicio = parseInt(document.getElementById('inicio').value);
+      const fim = parseInt(document.getElementById('fim').value);
+      const ul = document.getElementById('lista');
+      ul.innerHTML = '';
+      for (let i = inicio; i <= fim; i++) {
+        const li = document.createElement('li');
+        li.textContent = i;
+        ul.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

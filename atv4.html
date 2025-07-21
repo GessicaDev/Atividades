@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 4</title>
+  <style>
+    body { background-color: #ffe6f0; font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px; background-color: #ff99cc; border: 1px solid #ff66b3; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Clique no botão e veja quantas vezes clicou:</h2>
+  <button onclick="contar()">Clique aqui</button>
+  <p id="contador">0</p>
+  <script>
+    let count = 0;
+    function contar() {
+      count++;
+      document.getElementById('contador').textContent = count;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 1</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ff66b3;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ff99cc;
+      cursor: pointer;
+    }
+    ul {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digite um número e veja a lista de 1 até esse número:</h2>
+  <input type="number" id="num" placeholder="Digite um número">
+  <br>
+  <button onclick="gerarLista()">Gerar Lista</button>
+  <ul id="lista"></ul>
+  <script>
+    function gerarLista() {
+      const n = parseInt(document.getElementById('num').value);
+      const ul = document.getElementById('lista');
+      ul.innerHTML = '';
+      for (let i = 1; i <= n; i++) {
+        const li = document.createElement('li');
+        li.textContent = i;
+        ul.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 5</title>
+  <style>
+    body { background-color: #ffe6f0; font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px; background-color: #ff99cc; border: 1px solid #ff66b3; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Cada botão conta seus próprios cliques:</h2>
+  <button onclick="contar(0)">Botão 1</button>
+  <span id="c0">0</span><br>
+  <button onclick="contar(1)">Botão 2</button>
+  <span id="c1">0</span><br>
+  <button onclick="contar(2)">Botão 3</button>
+  <span id="c2">0</span>
+  <script>
+    let contadores = [0, 0, 0];
+    function contar(i) {
+      contadores[i]++;
+      document.getElementById('c'+i).textContent = contadores[i];
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atividade 6</title>
+  <style>
+    body { background-color: #ffe6f0; font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px; background-color: #ff99cc; border: 1px solid #ff66b3; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Cada clique adiciona um número à lista:</h2>
+  <button onclick="adicionar()">Adicionar número</button>
+  <ul id="lista"></ul>
+  <script>
+    let numero = 1;
+    function adicionar() {
+      const li = document.createElement('li');
+      li.textContent = numero++;
+      document.getElementById('lista').appendChild(li);
+    }
+  </script>
+</body>
+</html>
